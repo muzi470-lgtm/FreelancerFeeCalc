@@ -5,25 +5,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  experimental: {
-    reactCompiler: true,
-  },
-  // Domain redirect (www to non-www)
-  async redirects() {
-    return [
-      {
-        source: '/:path*',
-        has: [
-          {
-            type: 'host',
-            value: 'www.freelancefeecalc.site',
-          },
-        ],
-        destination: 'https://freelancefeecalc.site/:path*',
-        permanent: true,
-      },
-    ];
-  },
+  // reactCompiler hata diya — experimental warning aa rahi thi
   async headers() {
     return [
       {

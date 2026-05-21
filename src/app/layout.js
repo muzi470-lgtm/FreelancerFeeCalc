@@ -21,7 +21,7 @@ export const metadata = {
   authors: [{ name: 'FreelanceFeeCalc' }],
   creator: 'FreelanceFeeCalc',
   metadataBase: new URL('https://freelancefeecalc.site'),
-  openGraph: {
+   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://freelancefeecalc.site',
