@@ -1,11 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  trailingSlash: true,
+  // trailingSlash: true,  ← YEH HATA DO
   images: {
     unoptimized: true,
   },
-  // headers hata diya — static export mein kaam nahi karta
 };
 
 export default nextConfig;
