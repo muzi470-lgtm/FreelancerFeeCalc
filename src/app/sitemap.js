@@ -1,3 +1,5 @@
+export const dynamic = 'force-static';
+
 import { getAllCountrySlugs } from '@/data/taxRules';
 import { getAllPlatformSlugs } from '@/data/platforms';
 

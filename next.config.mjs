@@ -5,32 +5,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // reactCompiler hata diya — experimental warning aa rahi thi
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'strict-origin-when-cross-origin',
-          },
-          {
-            key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()',
-          },
-        ],
-      },
-    ];
-  },
+  // headers hata diya — static export mein kaam nahi karta
 };
 
 export default nextConfig;
