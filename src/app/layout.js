@@ -1,5 +1,6 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
+import Script from 'next/script';
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -21,7 +22,7 @@ export const metadata = {
   authors: [{ name: 'FreelanceFeeCalc' }],
   creator: 'FreelanceFeeCalc',
   metadataBase: new URL('https://freelancefeecalc.site'),
-   openGraph: {
+  openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://freelancefeecalc.site',
@@ -86,7 +87,7 @@ export const metadata = {
     ],
   },
   verification: {
-    google: 'YOUR_GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE', // ← Baad mein add karna
+    google: 'YOUR_GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE',
   },
   category: 'finance',
 };
@@ -102,6 +103,21 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-C74SD1HM60"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-C74SD1HM60');
+          `}
+        </Script>
+      </head>
       <body className={`${inter.className} min-h-screen relative`}>
         <div className="gradient-bg" aria-hidden="true" />
         <div className="relative z-10">
