@@ -3,7 +3,7 @@
 // Next.js will automatically serve this at /sitemap.xml
 
 import { platforms } from '@/data/platforms';
-import { taxRules } from '@/data/taxRules';
+import { countries as taxRules } from '@/data/taxRules';  // <-- Fixed: import 'countries' as 'taxRules'
 
 const BASE_URL = 'https://www.freelancefeecalc.site';
 
