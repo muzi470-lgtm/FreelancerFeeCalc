@@ -2,17 +2,16 @@
 // ✅ Delete /public/sitemap.xml after adding this file
 // Next.js will automatically serve this at /sitemap.xml
 
-import { platforms } from '@/data/platforms';
-import { countries as taxRules } from '@/data/taxRules';  // <-- Fixed: import 'countries' as 'taxRules'
+import { platforms, getAllPlatformSlugs } from '@/data/platforms';
+import { countries as taxRules } from '@/data/taxRules';
 
 const BASE_URL = 'https://www.freelancefeecalc.site';
 
 export default function sitemap() {
   const countries = Object.keys(taxRules);
 
-  // Get all platform slugs — adjust this based on your platforms.js structure
-  // If platforms is an array of objects with a .slug or .id field, update accordingly
-  const platformSlugs = platforms.map((p) => p.slug ?? p.id ?? p.name?.toLowerCase().replace(/\s+/g, '-'));
+  // platforms is an object keyed by slug, so use Object.keys or getAllPlatformSlugs()
+  const platformSlugs = getAllPlatformSlugs();
 
   // Static routes
   const staticRoutes = [
