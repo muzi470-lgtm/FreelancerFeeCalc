@@ -21,17 +21,17 @@ export const metadata = {
   ],
   authors: [{ name: 'FreelanceFeeCalc' }],
   creator: 'FreelanceFeeCalc',
-  metadataBase: new URL('https://freelancefeecalc.site'),
+  metadataBase: new URL('https://www.freelancefeecalc.site'),
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://freelancefeecalc.site',
+    url: 'https://www.freelancefeecalc.site',
     siteName: 'FreelanceFeeCalc',
     title: 'FreelanceFeeCalc - Global Freelancer & Creator Profit Calculator',
     description: 'Calculate exact take-home profit after fees and taxes. 20+ platforms, 10 countries.',
     images: [
       {
-        url: 'https://freelancefeecalc.site/og-image.png',
+        url: 'https://www.freelancefeecalc.site/og-image.png',
         width: 1200,
         height: 630,
         alt: 'FreelanceFeeCalc - Freelancer Profit Calculator',
@@ -44,7 +44,7 @@ export const metadata = {
     creator: '@freelancefeecalc',
     title: 'FreelanceFeeCalc - Freelancer Profit Calculator',
     description: 'Know exactly what you keep after fees and taxes.',
-    images: ['https://freelancefeecalc.site/og-image.png'],
+    images: ['https://www.freelancefeecalc.site/og-image.png'],
   },
   robots: {
     index: true,
@@ -59,9 +59,9 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: 'https://freelancefeecalc.site',
+    canonical: 'https://www.freelancefeecalc.site',
     languages: {
-      'en-US': 'https://freelancefeecalc.site',
+      'en-US': 'https://www.freelancefeecalc.site',
     },
   },
   icons: {
@@ -75,14 +75,14 @@ export const metadata = {
       { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
     ],
   },
-  manifest: 'https://freelancefeecalc.site/site.webmanifest',
+  manifest: 'https://www.freelancefeecalc.site/site.webmanifest',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
     title: 'FreelanceFeeCalc',
     startupImage: [
       {
-        url: 'https://freelancefeecalc.site/apple-touch-icon.png',
+        url: 'https://www.freelancefeecalc.site/apple-touch-icon.png',
       },
     ],
   },
@@ -104,7 +104,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={inter.variable}>
       <head>
-        {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-C74SD1HM60"
           strategy="afterInteractive"
